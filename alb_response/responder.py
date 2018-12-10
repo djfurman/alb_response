@@ -2,7 +2,9 @@ import json as py_json
 from http import HTTPStatus
 
 
-def alb_response(http_status, data=None, json=None, headers=None, base64_encoded=False):
+def alb_response(
+    http_status, data=None, json=None, headers=None, is_base64_encoded=False
+):
 
     response_headers = {}
     status_code = HTTPStatus(http_status)
@@ -11,6 +13,8 @@ def alb_response(http_status, data=None, json=None, headers=None, base64_encoded
 
     if json is not None:
         response_headers["content-type"] = "application/json"
+        if headers is not None:
+            response_headers.update(headers)
         if isinstance(json, str):
             payload = json
         else:
@@ -18,16 +22,16 @@ def alb_response(http_status, data=None, json=None, headers=None, base64_encoded
     else:
         payload = data
 
-    if headers is None:
-        response_headers["content-type"] = "text/plain"
-    else:
-        response_headers.update(headers)
+        if headers is None:
+            response_headers["content-type"] = "text/plain"
+        else:
+            response_headers.update(headers)
 
     response = {
-        "isBase64Encoded": base64_encoded,
+        "isBase64Encoded": is_base64_encoded,
         "statusCode": int(http_status),
         "statusDescription": status_description,
-        "headers": headers,
+        "headers": response_headers,
         "body": payload,
     }
 
