@@ -1,5 +1,5 @@
-[![](https://img.shields.io/pypi/l/Django.svg?style=plastic)](./LICENSE.md)
-![Code Style - Black](https://raw.githubusercontent.com/ambv/black/master/docs/_static/logo2-readme.png)
+[![License](https://img.shields.io/pypi/l/Django.svg?style=plastic)](./LICENSE.md)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 # AWS ALB Response Creator
 
