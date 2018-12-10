@@ -35,3 +35,19 @@ def lambda_handler(event, context):
 1. Create a target group for the Lambda
 1. Assign appropriate permissions to your Lambda function
 1. Attach the target group to the ALB with a rule
+
+## Contributing
+
+Contributions are welcome! Please open an issue or make a pull request.
+
+If making a pull request, please run the tests and ensure that you maintain or increase code coverage.
+
+### Dependencies
+
+To make this project more portable and keep environments organized, this project leverages `pipenv`. To install deterministic dependencies, run `pipenv sync`.
+
+### Run Tests
+
+To run the tests, install the dependencies and run `behave`.
+
+To get code coverage as well, run `coverage run --source='.' -m behave` followed by `coverage report`.
