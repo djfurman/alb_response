@@ -51,3 +51,10 @@ To make this project more portable and keep environments organized, this project
 To run the tests, install the dependencies and run `behave`.
 
 To get code coverage as well, run `coverage run --source='.' -m behave` followed by `coverage report`.
+
+# Release Log
+
+- `0.1.0`
+  - Initial Release
+- `0.1.1`
+  - Dependency update to resolve [CVE-2019-11324](https://nvd.nist.gov/vuln/detail/CVE-2019-11324).
