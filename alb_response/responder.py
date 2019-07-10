@@ -11,7 +11,7 @@ def alb_response(
 
     status_description = build_status_description(int(status_code))
 
-    if json is not None:
+    if json:
         response_headers["content-type"] = "application/json"
         if headers is not None:
             response_headers.update(headers)
@@ -31,11 +31,13 @@ def alb_response(
         "isBase64Encoded": is_base64_encoded,
         "statusCode": int(http_status),
         "statusDescription": status_description,
-        "headers": response_headers,
-        "body": payload,
+        "headers": response_headers
     }
-
+    if payload:
+        response["body"] = payload
+        
     return response
+
 
 
 def build_status_description(status_code):
