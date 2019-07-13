@@ -58,3 +58,5 @@ To get code coverage as well, run `coverage run --source='.' -m behave` followed
   - Initial Release
 - `0.1.1`
   - Dependency update to resolve [CVE-2019-11324](https://nvd.nist.gov/vuln/detail/CVE-2019-11324).
+- `0.1.2`
+  - Patch to support null json responses without sending an empty json object
