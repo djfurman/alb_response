@@ -1,9 +1,26 @@
 [![License](https://img.shields.io/pypi/l/Django.svg?style=plastic)](./LICENSE.md)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![Deprecated](https://img.shields.io/static/v1?label=package-status&message=deprecated&color=critical)](#deprecation-notice)
 
 # AWS ALB Response Creator
 
-The AWS announcement of [Application Load Balancers supporting Lambda functions](https://aws.amazon.com/blogs/networking-and-content-delivery/lambda-functions-as-targets-for-application-load-balancers/) made my reInvent experience!
+The AWS announcement of [Application Load Balancers supporting Lambda functions](https://aws.amazon.com/blogs/networking-and-content-delivery/lambda-functions-as-targets-for-application-load-balancers/) made my reInvent:2018 experience!
+
+## Deprecation Notice
+
+The time has come to retire this package. I want to thank everyone for the support this package has received, and I hope it has provided you with some utility.
+
+The [AWS Lambda Powertools for Python](https://awslabs.github.io/aws-lambda-powertools-python/latest/) project provides an extremely high quality and fast response formatter that intelligently supports the several ways a Lambda function can event-source API events.
+
+In addition, the functionality provided by the powertools project exceeds any vision I had for this utility. I strongly encourage you to adopt this library! I've already moved all of my applications over to it and recommend it to all serverless developers.
+
+It is
+
+- maintained by a vibrant, welcoming open source community
+- optimized and automated with speed benchmarks built into testing
+- a codified best practices framework for building serverless applications
+
+Beyond API event handling for request/response control, it supports batch processing, stream processing, validation, tracing, and logging, to name just a few of its capabilities.
 
 ## Purpose
 
